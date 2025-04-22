@@ -1,0 +1,142 @@
+/* Define color variables */
+:root {
+  --primary-color: #3498db; /* Light Blue */
+  --secondary-color: #ecf0f1; /* Soft Grey */
+  --accent-color: #2c3e50; /* Dark Blue */
+  --error-color: #e74c3c; /* Red */
+  --text-color: #2c3e50; /* Dark Grey */
+  --input-bg-color: #f4f4f4; /* Light Grey for input fields */
+  --button-bg-color: #3498db; /* Light Blue for button */
+  --button-hover-bg-color: #2980b9; /* Darker Blue for button hover */
+}
+
+/* Full screen background and container setup */
+.login-page {
+  height: 100vh;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login container layout with 2 halves */
+.login-container {
+  width: 90%; /* Make container 80% of screen size */
+  height: 90%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Left half styling */
+.login-left {
+  background-color: var(--primary-color); /* Light Blue */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  height: 100%;
+  text-align: center;
+}
+
+.login-heading {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.login-description {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+/* Right half (form) styling */
+.login-right {
+  background-color: #fff;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.form-label {
+  font-size: 1.1rem;
+  color: var(--accent-color); /* Dark Blue */
+}
+
+.login-input {
+  background-color: var(--input-bg-color); /* Light Grey */
+  border: 1px solid #ddd; /* Slightly lighter border */
+  border-radius: 12px; /* More rounded corners */
+  padding: 12px 20px; /* Adjusted padding for better spacing */
+  font-size: 1.1rem;
+  color: #333; /* Slightly darker text for contrast */
+  width: 100%; /* Ensure the input spans the full width of the container */
+  box-sizing: border-box; /* Ensures padding does not affect width */
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.login-input:focus {
+  border-color: var(--primary-color); /* Highlight border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle shadow for focus */
+  outline: none; /* Remove default outline */
+}
+
+.login-input::placeholder {
+  color: #aaa; /* Lighter placeholder text */
+  font-style: italic; /* Optional: gives placeholder text a different style */
+}
+
+/* Submit button styling */
+.login-btn {
+  background-color: var(--button-bg-color); /* Light Blue */
+  border: none;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: var(--button-hover-bg-color); /* Darker Blue */
+  cursor: pointer;
+}
+
+/* Error message styling */
+.alert {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(231, 76, 60, 0.2);
+  color: var(--error-color); /* Red */
+  border: 1px solid var(--error-color); /* Red */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-left,
+  .login-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .login-card {
+    padding: 20px;
+  }
+}
